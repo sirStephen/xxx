@@ -233,12 +233,13 @@ header {
     width: 50%;
   }
 
-  .column.is-6-tablet {
+  /* .column.is-6-tablet {
     margin-bottom: 3rem;
-  }
+    margin-top: 3rem;
+  } */
 
   .column.is-6-tablet:last-child {
-    margin-bottom: 0;
+    margin-bottom: 6rem;
   }
 }
 
@@ -282,6 +283,10 @@ header {
   .menu {
     display: block;
   }
+
+  .column.is-6-tablet:last-child {
+    margin-bottom: 6rem;
+  }
 }
 
 @media only screen and (max-width: 516px) {
@@ -290,11 +295,19 @@ header {
     font-size: 1.3rem;
     padding: 0.5rem 5rem;
   }
+
+  .column.is-6-tablet:last-child {
+    margin-bottom: 6rem;
+  }
 }
 
 @media only screen and (max-width: 312px) {
   .intro-job {
     padding: 0.5rem 0rem;
+  }
+
+  .column.is-6-tablet:last-child {
+    margin-bottom: 6rem;
   }
 }
 
