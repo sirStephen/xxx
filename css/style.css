@@ -172,8 +172,8 @@ header {
   max-width: 100%;
   position: relative;
   margin: 6rem;
+  border-radius: 1rem;
 }
-
 
 .current-card {
   background-color: white;
@@ -190,7 +190,7 @@ header {
 .header-image {
   width: 100%;
   min-height: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
   /* background: url(../img/oliur-280433-unsplash.jpg) no-repeat center center fixed; */
   background: url(../img/image1.jpg) no-repeat center center fixed;
@@ -203,4 +203,109 @@ header {
 
 .box {
   padding-top: 2rem;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #ffffff;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #ffffff;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: #00f0ff;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #ffffff;
+	}
+}
+
+@media only screen and (max-width: 1048px) {
+  .column.is-4-desktop {
+    width: 50%;
+  }
+
+  .column.is-6-tablet {
+    margin-bottom: 3rem;
+  }
+
+  .column.is-6-tablet:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 721px) {
+  .column.is-6-tablet {
+    width: 100%;
+  }
+
+  .nav-container {
+    padding: 0;
+  }
+  
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 10;
+    background-color: #005C7F;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    justify-content: space-evenly;
+    width: 85%;
+    text-align: left;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .nav-links li:last-child {
+    padding: 0 2rem;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 516px) {
+  .intro-job {
+    /* font-size: 1.6rem; */
+    font-size: 1.3rem;
+    padding: 0.5rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 312px) {
+  .intro-job {
+    padding: 0.5rem 0rem;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
 }
